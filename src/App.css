@@ -1,0 +1,117 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  /* background-color: rgb(46, 46, 90); */
+  flex-direction: column; /* Align components vertically */
+}
+
+.container{
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar.css */
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo .logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #007bff;
+}
+
+.auth-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-auth {
+    margin-top: 20px;
+  }
+}
