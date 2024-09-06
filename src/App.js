@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import History from './components/History'
+import History from './components/History';
 import MapComponent from './components/MapComponent';
 import Menu from './components/Menu';
 
