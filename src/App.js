@@ -1,13 +1,26 @@
 // src/App.js
 import React from 'react';
-import MapComponent from './components/MapComponent'; // Import the MapComponent
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import History from './components/History'
+import MapComponent from './components/MapComponent';
+import Menu from './components/Menu';
 
 function App() {
   return (
-    <div className="flex flex-col h-screen w-screen"> {/* Full screen container */}
-      <h1 className="text-center text-2xl font-bold p-4">Map Display with React and Tailwind CSS</h1>
-      <MapComponent />
-    </div>
+    <Router>
+      <div className="flex flex-col h-screen w-screen">
+        <Navbar />
+        <div className="flex-grow relative">
+          <Routes>
+            <Route path="/" element={<MapComponent />} />
+            <Route path="/history" element={<History/>}/>
+            {/* Add other routes here */}
+          </Routes>
+        </div>
+        <Menu />
+      </div>
+    </Router>
   );
 }
 
